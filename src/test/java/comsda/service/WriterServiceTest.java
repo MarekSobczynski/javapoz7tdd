@@ -1,5 +1,6 @@
 package comsda.service;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -37,5 +38,14 @@ public class WriterServiceTest {
         String result = writerService.write(name);
         //then
         Assert.assertEquals("HELLO, SZYMON!", result);
+    }
+    @Test
+    public void testBlankName(){
+        //given
+        String name = "";
+        //when
+        String result = writerService.write(name);
+        //then
+        Assert.assertEquals("Hello, my friend." ,result );
     }
 }
