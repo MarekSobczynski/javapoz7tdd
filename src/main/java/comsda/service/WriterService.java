@@ -12,7 +12,7 @@ public class WriterService {
     }
 
     private String contetnt(String name) {
-        return StringUtils.isEmpty(name) ? "my friend" : name;
+        return StringUtils.isBlank(name) ? "my friend" : name;
     }
 
     private String suffix(String name) {
@@ -20,7 +20,7 @@ public class WriterService {
     }
 
     private boolean isCapitalaizedName(String name){
-        return StringUtils.isNotEmpty(name) && name.toUpperCase().equals(name);
+        return StringUtils.isNotBlank(name) && name.toUpperCase().equals(name);
     }
 
 }
